@@ -1,13 +1,25 @@
-text = input("Enter a string: ")
+scores = [95, 82, 67, 45, 77]
 
-char_count = {}
 
-for char in text:
-    if char in char_count:
-        char_count[char] += 1
+try:
+    user_score = int(input("Enter a score: "))
+
+    
+    if user_score in scores:
+        
+        if user_score >= 90:
+            grade = "A"
+        elif 75 <= user_score <= 89:
+            grade = "B"
+        elif 60 <= user_score <= 74:
+            grade = "C"
+        else:
+            grade = "F"
+        
+        print(f"The grade for score {user_score} is: {grade}")
     else:
-        char_count[char] = 1
+        
+        print("Score not found")
 
-print("\nCharacter occurrences:")
-for char, count in char_count.items():
-    print(f"'{char}': {count}")
+except ValueError:
+    print("Invalid input. Please enter a valid integer score.")

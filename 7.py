@@ -1,11 +1,11 @@
-text = input("Enter a string: ")
+students = ["Alice", "Bob", "Charlie", "David", "Eva"]
 
-vowels = "aeiouAEIOU"
 
-count = 0
+for i in range(3):
+    name = input(f"Enter student name ({i+1}/3): ")
 
-for char in text:
-    if char in vowels:
-        count += 1
-
-print("Number of vowels in the string:", count)
+    
+    if name in students:
+        print(f"Student {name} is enrolled.")
+    else:
+        print(f"Student {name} is not found.")
