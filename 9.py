@@ -1,5 +1,10 @@
-text = input("Enter a string: ")
+words = ["Python", "is", "an", "amazing", "language"]
 
-reversed_text = text[::-1]
 
-print("Reversed string:", reversed_text)
+n = int(input("Enter a number (n): "))
+
+
+print(f"Words with length greater than {n}:")
+for word in words:
+    if len(word) > n:
+        print(word)
